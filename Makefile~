@@ -1,0 +1,13 @@
+CXX ?= gcc
+CFLAGS = -Wall -Wconversion -fPIC -w -fpermissive -g
+
+all: flow_final makedatafile
+
+flow_final: flow_final.c svmpredict.c svm.o
+	$(CXX) $(CFLAGS) flow_final.c svmpredict.c createmodel_test.c noiseremoval.c svm.o -o flow_final -lm 
+
+makedatafile: makedatafile.c
+	$(CXX) $(CFLAGS) `wfdb-config --cflags` makedatafile.c -o makedatafile -lm `wfdb-config --libs`
+
+clean:
+	rm -f *~ flow_final makedatafile
