@@ -21,3 +21,5 @@ res/confi_output1.txt		is the stored output regarding the filtering and segmenta
 res/confi_output2.txt		is the stored output regarding the feature extraction and classification stage execution times
 data/data_i.txt			is the inputed ECG signal
 configs/model_config_i.txt	is the inputed svm model which corresponds to the feature vector configurations
+
+in line 80 you can set the length of the inputed signal and in line 85 the window (3000 samples being the minimum when using wqrs) on which the analysis and classification is to be applied
