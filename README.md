@@ -1,26 +1,2 @@
 # thesis
 ECG signal analysis and classification
-
-The following files will be found in this directory:
-
-Makefile		`make' description file for compiling the application
-README			this file
-flow_final.c		Analyzes and classifies the ECG signal using wqrs as R peak detector
-flow_final_sqrs.c	Analyzes and classifies the ECG signal using sqrs as R peak detector
-noiseremoval.c		Filters signal at 1-50Hz bandwidth
-svmpredict.c		Classifies a single heartbeat
-svm.h			Functions and structures used by svmpredict.c are declared in this header file
-svm.o			Object file (of svm.cpp - not included here) needed for svmpredict.c to be linked with 
-model.h			Just another header file
-script.py		Script to run the application with different inputs
-configs			Folder containing configurations regarding the feature vector and the corresponding svm model
-data			Folder containing ECG signal records
-res			Folder to store results
-
-'flow_final' Usage: flow_final configs/config_i.txt res/confi_output1.txt res/confi_output2.txt data/data_i.txt configs/model_config_i.txt
-
-configs/config_i.txt		is the feature vector configuration
-res/confi_output1.txt		is the stored output regarding the filtering and segmentation stage execution times
-res/confi_output2.txt		is the stored output regarding the feature extraction and classification stage execution times
-data/data_i.txt			is the inputed ECG signal
-configs/model_config_i.txt	is the inputed svm model which corresponds to the feature vector configurations
